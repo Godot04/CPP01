@@ -1,4 +1,4 @@
-# C++ - Module 01: Memory, References, and File I/O
+# C++ - Module 01: Memory, References and File I/O
 
 ![42 school](https://img.shields.io/badge/42-School-000000?style=flat-square&logo=42&logoColor=white)
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
