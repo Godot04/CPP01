@@ -1,106 +1,167 @@
-# CPP01 - C++ Module 01
+# C++ - Module 01: Memory, References, and File I/O
 
 ![42 school](https://img.shields.io/badge/42-School-000000?style=flat-square&logo=42&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
-![Norminette](https://img.shields.io/badge/Norminette-passing-success?style=flat-square)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![Standard](https://img.shields.io/badge/Standard-C%2B%2B98-blue?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Complete-success?style=flat-square)
 
 ## About
 
-CPP01 is a 42 School C++ training module focused on the first steps beyond plain C. It introduces object-oriented design, memory management, references, pointers, file handling, and basic class organization through a set of small exercises.
+**C++ Module 01** continues the introduction to object-oriented programming in C++98 by focusing on object lifetime, dynamic allocation, references, pointers, and basic file handling. Each exercise isolates one concept so the progression stays practical and easy to review.
 
-The goal of the module is not only to make the programs work, but also to help build habits around clean class interfaces, predictable resource management, and code that is easy to reason about.
+## Project Goals
 
-## Goals
+- Understand how objects behave on the stack and the heap
+- Practice references, pointers, and basic ownership rules
+- Learn how constructors and destructors shape class behavior
+- Work with file streams and string manipulation in C++
+- Build small programs with clear responsibilities and limited scope
 
-- Understand the difference between stack and heap allocation
-- Work with classes, constructors, destructors, and member functions
-- Use references and pointers intentionally
-- Practice file input and output in C++
-- Learn how to split a project into small, focused translation units
-- Keep the code compatible with the 42 C++ constraints and Norminette rules
+## Exercise Overview
 
-## Structure
+### Exercise 00: BraiiiiiiinnnzzzZ
 
-This workspace contains the exercises for CPP01:
+**Directory:** `ex00/`
+**Executable:** `BraiiiiiiinnnzzzZ`
 
-- `ex00` - Introduction to classes and object lifetime
-- `ex01` - Dynamic allocation and manual memory management
-- `ex02` - Arrays of objects and allocation patterns
-- `ex03` - Reference members and object relationships
-- `ex04` - File stream processing and text replacement
-- `ex05` - Basic class behavior, methods, and internal helpers
+This first exercise introduces a simple class and object lifecycle through a small zombie example. It is designed to practice class creation, member functions, and the difference between stack-based and heap-based object management.
 
-Each exercise has its own `Makefile` and is meant to be built separately.
+#### Learning Concepts
 
-## Exercises Overview
+- Basic class structure
+- Constructors and destructors
+- Heap allocation and manual cleanup
+- Function-based object creation helpers
 
-### ex00
+### Exercise 01: Moar brainz!
 
-First contact with a simple class and object lifecycle. This exercise is used to understand how instances are created, how methods are called, and when constructors and destructors are triggered.
+**Directory:** `ex01/`
+**Executable:** `Moar_Brainz!`
 
-### ex01
+This exercise expands the zombie example by creating an array of objects dynamically. The main focus is understanding how to build and return multiple objects from a helper function while keeping memory management safe.
 
-Introduces dynamic allocation and ownership. The focus is on creating objects on the heap, returning them safely, and avoiding leaks by matching every allocation with a proper cleanup path.
+#### Learning Concepts
 
-### ex02
+- Dynamic allocation of object arrays
+- Loop-based initialization
+- Centralized cleanup logic
+- Working with simple class collections
 
-Works with collections of objects allocated together. This exercise helps practice array initialization, iteration, and consistent destruction of multiple instances.
+### Exercise 02: HI THIS IS BRAIN
 
-### ex03
+**Directory:** `ex02/`
+**Executable:** `HI_THIS_IS_BRAIN`
 
-Explores references in class design. The point is to understand how one object can depend on another without taking ownership, and how that affects constructor signatures and object lifetime.
+This exercise compares a string, a pointer to that string, and a reference to that string. It is a compact way to observe addresses, indirection, and the difference between references and pointers in C++.
 
-### ex04
+#### Learning Concepts
 
-Introduces file handling with C++ streams. The exercise practices reading a file, transforming its content, and writing the result to a new file using a clear, repeatable workflow.
+- Pointers versus references
+- Address inspection
+- Value access through indirection
+- Minimal program structure in C++98
 
-### ex05
+### Exercise 03: Unnecessary violence
 
-Focuses on class methods, message handling, and internal helper logic. This exercise reinforces encapsulation and the idea that classes should expose a small, readable public interface.
+**Directory:** `ex03/`
+**Executable:** `Unnecessary_violence`
 
-## Build
+This exercise introduces collaboration between classes through references and shared state. It explores how one object can use another object without owning it, which is a useful pattern for designing lightweight relationships.
 
-Each exercise can be compiled from its own directory:
+#### Learning Concepts
+
+- Class interaction through references
+- Shared object usage
+- Encapsulation and accessor methods
+- Constructor-driven initialization
+
+### Exercise 04: Sed is for losers
+
+**Directory:** `ex04/`
+**Executable:** `Sed_is_for_losers`
+
+This exercise works with file input and output streams to create a modified copy of a text file. It is intended to practice reading from files, writing to files, and handling basic string transformations safely.
+
+#### Learning Concepts
+
+- File stream handling with `std::ifstream` and `std::ofstream`
+- Command-line argument validation
+- String search and replacement logic
+- Output file generation
+
+### Exercise 05: Harl 2.0
+
+**Directory:** `ex05/`
+**Executable:** `Harl_2.0`
+
+This exercise focuses on behavior dispatch inside a class. The goal is to route a textual level to a matching member function and keep the response logic organized and readable.
+
+#### Learning Concepts
+
+- Member function pointers or equivalent dispatch logic
+- Encapsulated behavior selection
+- Simple input-driven branching
+- Clean class API design
+
+## Compilation
+
+Each exercise has its own Makefile and can be built independently.
+
+### Build an Exercise
 
 ```bash
 cd ex00
 make
 ```
 
-Common targets:
+Replace `ex00` with any other exercise directory as needed.
 
-- `make` - Build the executable
+### Available Targets
+
+- `make` - Compile the exercise
 - `make clean` - Remove object files
 - `make fclean` - Remove object files and the executable
 - `make re` - Rebuild everything from scratch
 
-## Run
+### Compilation Flags
 
-The exact executable name depends on the exercise, but the usual workflow is:
+- Compiler: `c++`
+- Standard: `-std=c++98`
+- Warnings: `-Wall -Wextra -Werror`
+
+## Usage
+
+Run the executable from inside the exercise directory after building it.
 
 ```bash
-./program_name [arguments]
+./BraiiiiiiinnnzzzZ
+./Moar_Brainz!
+./HI_THIS_IS_BRAIN
+./Unnecessary_violence
+./Sed_is_for_losers file.txt "old" "new"
+./Harl_2.0
 ```
-
-Check the `Makefile` in each folder for the final binary name and the expected usage.
-
-## Learning Outcomes
-
-By finishing CPP01, you should be more comfortable with:
-
-- Object construction and destruction order
-- Heap versus stack ownership
-- Copying and passing objects safely
-- Stream-based file manipulation
-- Breaking a task into small reusable functions
 
 ## Technical Notes
 
-- Language: C++
-- Standard: follow the version required by the subject
-- Style: 42 Norminette and project-specific constraints
-- Build system: one `Makefile` per exercise
+- The project follows the C++98 standard required by the module
+- Exercises are intentionally small and isolated so each concept stays visible
+- The code avoids unnecessary abstraction and keeps responsibilities local to each exercise
+- File handling and dynamic allocation are introduced only where the exercise requires them
+
+## Testing
+
+Recommended checks for this module:
+
+- Build every exercise with `make`
+- Run each executable with representative inputs
+- Check that file-based exercises handle invalid arguments gracefully
+- Verify that stack and heap behavior matches the exercise intent
+
+## Learning Outcome
+
+By the end of this module, you should be comfortable reading and writing small C++98 programs that use classes, references, pointers, dynamic memory, and file streams. The exercises are designed to build the habits needed for later C++ modules without hiding the core mechanics.
 
 ## Author
 
-**opopov** - 42 School student
+**opopov** - 42 School Student
