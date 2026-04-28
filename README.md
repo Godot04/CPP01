@@ -129,19 +129,6 @@ Replace `ex00` with any other exercise directory as needed.
 - Standard: `-std=c++98`
 - Warnings: `-Wall -Wextra -Werror`
 
-## Usage
-
-Run the executable from inside the exercise directory after building it.
-
-```bash
-./BraiiiiiiinnnzzzZ
-./Moar_Brainz!
-./HI_THIS_IS_BRAIN
-./Unnecessary_violence
-./Sed_is_for_losers file.txt "old" "new"
-./Harl_2.0
-```
-
 ## Technical Notes
 
 - The project follows the C++98 standard required by the module
@@ -157,10 +144,6 @@ Recommended checks for this module:
 - Run each executable with representative inputs
 - Check that file-based exercises handle invalid arguments gracefully
 - Verify that stack and heap behavior matches the exercise intent
-
-## Learning Outcome
-
-By the end of this module, you should be comfortable reading and writing small C++98 programs that use classes, references, pointers, dynamic memory, and file streams. The exercises are designed to build the habits needed for later C++ modules without hiding the core mechanics.
 
 ## Author
 
